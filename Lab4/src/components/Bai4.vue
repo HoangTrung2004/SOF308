@@ -3,7 +3,7 @@
         <h1 class="text-center ">Kiến thức sức khỏe cộng đồng</h1>
         <div class="row">
             <div class="col-sm-4">
-                <div class="card">
+                <div class="card h-100">
                     <img :src="items[0].image" alt="Hình ảnh" />
                     <div class="card-body">
                         <h3 class="card-title">{{ items[0].title }}</h3>
@@ -35,6 +35,7 @@
         </div>
     </div>
 </template>
+
 <script setup>
 // Import hình ảnh từ thư mục assets
 import img1 from '../assets/images/orange_300x300.jpg';
@@ -42,15 +43,19 @@ import img2 from '../assets/images/sesameoil_300x300.jpg';
 import img3 from '../assets/images/spinach_300x300.jpg';
 const items = ([
     {
-        title: '8 loại rau củ quả giàu canxi', content: 'Canxi là...', image: img1
+        title: '8 loại rau củ quả giàu canxi', 
+        content: 'Canxi là...', 
+        image: img1
     },
     {
-        title: 'Các loại gia vị tốt cho sức khỏe', content: 'Một số loại...',
+        title: 'Các loại gia vị tốt cho sức khỏe', 
+        content: 'Một số loại...',
         image: img2
     },
     {
-        title: '9 loại đậu bổ dưỡng nên dùng nhiều', content: 'Đậu lăng...', image:
-            img3
+        title: '9 loại đậu bổ dưỡng nên dùng nhiều', 
+        content: 'Đậu lăng...', 
+        image:    img3
     },
 ]);
 </script>

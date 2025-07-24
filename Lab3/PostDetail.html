@@ -115,16 +115,18 @@
 
             <div class="col-md-4">
                 <h5 class="text">Bình luận vài viết tại đây</h5>
-                <form class="mb-3">
-                    <textarea id="nhapND" class="form-control" placeholder="Nhập bình luận của bạn" rows="3"></textarea>
-                    <button type="submit" class="btn btn-success mt-2">Gửi bình luận</button>
-                </form>
+                <div class="mb-3">
+                    <textarea id="nhap" class="form-control" placeholder="Nhập bình luận của bạn" rows="3"></textarea>
+                    <button onclick="send()" type="" class="btn btn-success mt-2">Gửi bình luận</button>
+                </div>
 
                 <h6 class="fw-bold">Danh sách các bình luận:</h6>
-                <ul class="list-group">
-                    <li class="list-group-item">🧑‍🦱 <strong>Bình An:</strong> Bài viết rất hữu ích!</li>
+                 <!-- <ul class="list-group">
+                    <li class="list-group-item">🧑‍🦱 <strong>An Bình:</strong> Bài viết rất hữu ích!</li>
                     <li class="list-group-item">👩‍🦰 <strong>Bình An:</strong> Cảm ơn những chia sẻ bổ ích</li>
-                </ul>
+                    <li id="noidung" class="list-unstyled"></li>
+                </ul>  -->
+                <ul id="noidung" class="list-unstyled"></ul>
             </div>
         </div>
     </div>
@@ -132,6 +134,19 @@
     <footer class="bg-dark text-white text-center py-3 mt-4">
         &copy; 2023 FPT Polytechnic
     </footer>
+
+
+        <script>
+            function send() {
+                const nhap = document.getElementById("nhap").value.trim();
+                const noidung =  document.getElementById("noidung");
+                if (nhap === "") return;
+                const li = document.createElement("li");
+                li.innerHTML = `<b>Bạn:</b> ${nhap}`;
+                noidung.appendChild(li);
+                document.getElementById("nhap").value = "";
+            }
+        </script>
 </body>
 
 </html>

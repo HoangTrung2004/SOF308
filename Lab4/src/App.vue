@@ -2,25 +2,16 @@
 import Hello from './components/Hello.vue';
 import Bai3 from './components/Bai3.vue';
 import Bai4 from './components/Bai4.vue';
+import Trang27 from './components/Trang27.vue';
 </script>
 
 <template>
-    <Hello/>
+    <Hello/>  
     <Bai3></Bai3>
     <Bai4/>
+    <Trang27/>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>

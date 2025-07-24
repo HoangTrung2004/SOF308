@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baif1_Lab3</title>
+    <title>Trang chủ</title>
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Bootstrap -->
@@ -13,64 +13,10 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm  " style="background-color: wheat;">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo-energy-pilates.png" alt="Logo" style="width: 150px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="Lab3ChuyenMuc.html"><i class="fa-solid fa-list"></i>
-                            <i class="bi bi-list-task"></i>
-                            Bài viết</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-film"></i>
-                            <i class="bi bi-film"></i>
-                            Video</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-circle-info"></i>
-                            <i class="bi bi-info-circle-fill"></i>
-                            Giới thiệu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-circle-info"></i>
-                            <i class="bi bi-calendar3"></i>
-                            Sự kiện</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            <i class="fa-solid fa-user"></i>
-                            <i class="bi bi-person-fill"></i>
-                            Tài khoản
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
-                            <li><a class="dropdown-item" href="#">Quên mật khẩu</a></li>
-                            <li><a class="dropdown-item" href="#">Đăng ký thành viên</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="navbar-nav d-flex">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tiếng Việt</a>
-                        <div class="container">
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tiếng Anh</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
+    <!-- NHÚNG NAVBAR Ở ĐÂY -->
+    <div id="navbar-placeholder"></div>
+    <!-- SLIDE BAR -->
+     <div class="container">
         <div id="carouselWithIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="0" class="active"></li>
@@ -98,8 +44,7 @@
             </a>
         </div>
     </div>
-
-
+    <!-- LAYOUT -->
     <div class="container">
         <section class="row">
             <div class="col-sm-4 ">
@@ -297,13 +242,24 @@
             </div>
         </div>
     </div>
+    <!-- NHÚNG FOOTER -->
+    <div id="footer-placeholder"></div>
 
 
-
-    <footer class="bg-dark text-white text-center py-3">
-        &copy; 2023 FPT Polytechnic
-    </footer>
-
+    <!-- SCRIPT NHÚNG NAVBAR -->
+    <script>
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+            
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>
